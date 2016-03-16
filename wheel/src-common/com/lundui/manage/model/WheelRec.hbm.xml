@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="WheelRec" table="tb_wheel_rec">
+		<id name="recId" column="recid">
+			<generator class="native"></generator>
+		</id>
+		<property name="axleNum" column="axle_num"/>
+		<property name="oldaxleNum" column="old_axle_num"/>
+		<property name="userName" column="user_name"/>
+		<property name="userTime" column="user_time"/>
+		<property name="depotCode" column="depot_code"/>
+	</class>
+</hibernate-mapping>

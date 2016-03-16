@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="DepotRepair" table="tb_depot_repair">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="jcNum" column="jc_num"/>
+		<property name="jcNumRep" column="jc_num_rep"/>
+		<many-to-one name="srcRecord1" column="src_record_1"></many-to-one>
+		<many-to-one name="srcRecord2" column="src_record_2"></many-to-one>
+		<many-to-one name="srcRecord3" column="src_record_3"></many-to-one>
+		<many-to-one name="srcRecord4" column="src_record_4"></many-to-one>
+		<many-to-one name="destRecrord1" column="dest_recrord_1"></many-to-one>
+		<many-to-one name="destRecrord2" column="dest_recrord_2"></many-to-one>
+		<many-to-one name="destRecrord3" column="dest_recrord_3"></many-to-one>
+		<many-to-one name="destRecrord4" column="dest_recrord_4"></many-to-one>
+		<property name="repairDate" column="repair_date"/>
+		<property name="depotName" column="depot_name"/>
+		<property name="depotCode" column="depot_code"/>
+		<property name="handlerUserNum" column="handler_user_num"/>
+		<property name="handlerUserName" column="handler_user_name"/>
+		<property name="comfirmUserNum" column="comfirm_user_num"/>
+		<property name="comfirmUserName" column="comfirm_user_name"/>
+	</class>
+</hibernate-mapping>

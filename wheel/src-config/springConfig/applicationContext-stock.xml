@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:aop="http://www.springframework.org/schema/aop"
+             xmlns:tx="http://www.springframework.org/schema/tx"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                     http://www.springframework.org/schema/context
+                     http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                     http://www.springframework.org/schema/aop
+                     http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                     http://www.springframework.org/schema/tx
+                     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<!-- DAO -->
+ 	<bean id="wheelRecordDao" class="com.lundui.manage.stock.dao.WheelRecordDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="wheelRecDao" class="com.lundui.manage.stock.dao.WheelRecDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="axleDao" class="com.lundui.manage.stock.dao.AxleDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="incomeDao" class="com.lundui.manage.stock.dao.IncomeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="outlayDao" class="com.lundui.manage.stock.dao.OutlayDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="tempRepairDao" class="com.lundui.manage.stock.dao.TemporaryRepairDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="wheelStockDao" class="com.lundui.manage.stock.dao.WheelStockDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="depotRepairDao" class="com.lundui.manage.stock.dao.DepotRepairDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="factoryRepairDao" class="com.lundui.manage.stock.dao.FactoryRepairDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- Service -->
+	<bean id="wheelRecordManageService" class="com.lundui.manage.stock.service.impl.WheelRecordManageServiceImpl"></bean>
+	<bean id="incomeManageService" class="com.lundui.manage.stock.service.impl.IncomeManageServiceImpl"></bean>
+	<bean id="outlayManageService" class="com.lundui.manage.stock.service.impl.OutlayManageServiceImpl"></bean>
+	<bean id="tempRepairManageService" class="com.lundui.manage.stock.service.impl.TempRepairManageServiceImpl"></bean>
+	<bean id="wheelStockManageService" class="com.lundui.manage.stock.service.impl.WheelStockManageServiceImpl"></bean>
+	<bean id="depotRepairManageService" class="com.lundui.manage.stock.service.impl.DepotRepairServiceImpl"></bean>
+	<bean id="factoryRepairManageService" class="com.lundui.manage.stock.service.impl.FactoryRepairManageServiceImpl"></bean>
+	<!-- Action -->
+	<bean id="wheelRecordManageAction" class="com.lundui.manage.stock.action.WheelRecordManangeAction" scope="prototype"></bean>
+	<bean id="incomeManageAction" class="com.lundui.manage.stock.action.IncomeManageAction" scope="prototype"></bean>
+	<bean id="outlayManageAction" class="com.lundui.manage.stock.action.OutlayManageAction" scope="prototype"></bean>
+	<bean id="tempReapirManageAction" class="com.lundui.manage.stock.action.TempRepairManageAction" scope="prototype"></bean>
+	<bean id="wheelStockManageAction" class="com.lundui.manage.stock.action.WheelStockManageAction" scope="prototype"></bean>
+	<bean id="wheelDownloadAction" class="com.lundui.manage.util.WheelDownloadAction" scope="prototype"></bean>
+	<bean id="depotRepairAction" class="com.lundui.manage.stock.action.DepotRepairAction" scope="prototype"></bean>
+	<bean id="factoryRepairAction" class="com.lundui.manage.stock.action.FactoryRepairAction" scope="prototype"></bean>
+</beans>

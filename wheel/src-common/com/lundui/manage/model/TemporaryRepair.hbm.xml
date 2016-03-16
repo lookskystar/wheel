@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="TemporaryRepair" table="tb_temporary_repair">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<!-- 
+		<property name="wheelCard" column="wheelset_id"/>
+		-->
+		<many-to-one name="record" column="wheelset_id"></many-to-one>
+		<property name="depotCode" column="depot_code"/>
+		<property name="depotName" column="depot_name"/>
+		<property name="jcNum" column="jx_num"/>
+		<property name="position" column="position"/>
+		<property name="hitchDesc" column="hitch_desc"/>
+		<property name="treatment" column="treatment"/>
+		<many-to-one name="outRecord" column="out_wheelset_id"/>
+		<property name="handlerUserNum" column="handler_user_num"/>
+		<property name="handlerUserName" column="handler_user_name"/>
+		<property name="comfirmUserNum" column="comfirm_user_num"/>
+		<property name="comfirmUserName" column="comfirm_user_name"/>
+		<property name="time" column="time"/>
+		<property name="distance" column="distance"/>
+	</class>
+</hibernate-mapping>

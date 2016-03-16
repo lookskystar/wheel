@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="stock" namespace="/inout" extends="common">
+	  	
+	  	<!--  
+	  	<action name="loginAction" class="loginAction">
+	  		<result name="main" type="redirect">main.jsp</result>
+	  		<result name="loginOut">login.jsp</result>
+	  	</action>
+	  -->
+	  <action name="wheelRecordAction" class="wheelRecordManageAction">
+	  		<result name="zclist">zcRecordList.jsp</result>
+	  		<result name="sxlist">simpleRecordList.jsp</result>
+	  		<result name="list">recordList2.jsp</result>
+	  		<result name="jxlist">recordList.jsp</result>
+	  		<result name="simplelist">simpleRecordList.jsp</result>
+	  		<result name="cardList">lunduiCardList.jsp</result>
+	  		<result name="cardList2">lunduiCardList2.jsp</result>
+	  		<result name="cardList3">lunduiCardList3.jsp</result>
+	  		<result name="cardList4">lunduiCardList4.jsp</result>
+	  		<result name="recentCardList">recentCardList.jsp</result>
+	  		<result name="info">lunduiInfo2.jsp</result>
+	  		<result name="toAdd">addLundui.jsp</result>
+	  		<result name="edit">editLundui.jsp</result>
+	  		
+	  		<result name="addSuccess" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  		<result name="updateSuccess" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  		<result name="jclist" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  </action>
+	  <action name="incomeAction" class="incomeManageAction">
+	      <result name="list">income.jsp</result>
+	      <result name="jxlist">jxincome.jsp</result>
+	      <result name="toAdd">addIncome.jsp</result>
+	      <result name="toAddnew">addIncomeNew.jsp</result>
+	      <result name="toAddrepair">addIncomeRepair.jsp</result>
+	      <result name="toAdd2">addIncome2.jsp</result>
+	      <result name="addSuccess" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  </action>
+	  <action name="outlayAction" class="outlayManageAction">
+	  	<result name="list">outgo.jsp</result>
+	  	<result name="jxlist">outgo2.jsp</result>
+	  	<result name="jxToAdd">addOutgo2.jsp</result>
+	  	<result name="toAdd">addOutgo.jsp</result>
+	  	<result name="addSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  </action>
+	  <action name="tempRepairAction" class="tempReapirManageAction">
+	  	<result name="list">linxiu.jsp</result>
+	  	<result name="toAdd">addLinxiu.jsp</result>
+	  	<result name="addSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="deleteSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  </action>
+	  <action name="wheelStockAction" class="wheelStockManageAction">
+	  	<result name="list">stockList.jsp</result>
+	  	<result name="simpleList">simpleStockList.jsp</result>
+	  	<result name="edit">editStock.jsp</result>
+	  	<result name="jsonList" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  </action>
+	  
+	  <action name="wheelDownload" class="wheelDownloadAction">  
+            <result name="success" type="stream">  
+                <param name="contentType">application/vnd.ms-excel</param>  
+                <param name="contentDisposition">attachment;fileName="${fileName}"</param>  
+                <param name="inputName">downloadFile</param>  
+            </result>  
+	  </action>
+	  <action name="depotRepair" class="depotRepairAction">
+	  	<result name="list">depotRepair.jsp</result>
+	  	<result name="toAdd">addDuanxiu.jsp</result>
+  		<result name="addSuccess" type="json">
+  			<param name="root">result</param>
+  		</result>
+	  </action>
+	  <action name="factoryRepair" class="factoryRepairAction">
+	  	<result name="list">factoryRepair.jsp</result>
+	  	<result name="toAdd">addChangxiu.jsp</result>
+	  	<result name="addSuccess" type="json">
+  			<param name="root">result</param>
+  		</result>
+	  </action>
+	</package>
+</struts>

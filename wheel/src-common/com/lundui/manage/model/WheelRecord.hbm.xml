@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="WheelRecord" table="tb_wheel_record">
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="axleNum" column="axle_num"/>
+		<property name="axleType" column="axle_type"/>
+		<property name="wheelTypeName" column="wheel_type"/>
+		<property name="axleBoxType" column="axle_box_type"/>
+		<property name="hasAxleBoxRelay" column="has_axle_box_relay"/>
+		<property name="hasAntiSkid" column="has_anti_skid"/>
+		<property name="antiSkidSize" column="anti_skid_size"/>
+		<property name="antiSkidLoc" column="anti_skid_location"/>
+		<property name="factory" column="factory"/>
+		<property name="createDate" column="create_date"/>
+		<property name="wheelCreateDate" column="wheel_create_date"/>
+		<property name="boxCreateDate" column="box_create_date"/>
+		<property name="axleCreateDate" column="axle_create_date"/>
+		<property name="leftRimThickness" column="left_rim_thickness"/>
+		<property name="rightRimThickness" column="right_rim_thickness"/>
+		<property name="leftCircularWear" column="left_circular_wear"/>
+		<property name="rightCircularWear" column="right_circular_wear"/>
+		<property name="leftDiameter" column="left_diameter"/>
+		<property name="rightDiamter" column="right_diamter"/>
+		<property name="leftFlangeThickness" column="left_flange_thickness"/>
+		<property name="rightFlangeThickness" column="right_flange_thickness"/>
+		<property name="leftBrakeDiscWear" column="left_brake_disc_wear"/>
+		<property name="rightBrakeDiscWear" column="right_brake_disc_wear"></property>
+		<property name="insideistance" column="inside_istance"/>
+		<property name="jcNum" column="jc_num"/>
+		<property name="position" column="position"/>
+		<property name="status" column="status"/>
+		<property name="whereabouts" column="whereabouts"/>
+		<property name="depotCode" column="depot_code"/>
+		<property name="depotName" column="depot_name"/>
+		<property name="comment" column="comment"/>
+	</class>
+</hibernate-mapping>

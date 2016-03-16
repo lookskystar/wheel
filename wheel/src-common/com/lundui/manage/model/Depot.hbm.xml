@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="Depot" table="tb_depot">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="depotName" column="depot_name" lazy="false"/>
+		<property name="depotCode" column="depot_code" lazy="false"/>
+		<property name="type" column="depot_type" lazy="false"></property>
+		<property name="location" column="depot_location"></property>
+		<many-to-one name="parent" column="parent_id"></many-to-one>
+	</class>
+</hibernate-mapping>

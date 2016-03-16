@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="Outlay" table="tb_outgo">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="record" column="wheelset_id"/>
+		<property name="depotCode" column="depot_code"/>
+		<property name="depotName" column="depot_name"/>
+		<property name="time" column="out_time"/>
+		<property name="reason" column="reason"/>
+		<property name="targetUnit" column="target_unit"/>
+		<property name="remark" column="remark"/>
+		<property name="userNum" column="user_num"/>
+		<property name="userName" column="user_name"/>
+	</class>
+</hibernate-mapping>

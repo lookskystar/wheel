@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="Resource" table="td_resources">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="resourceName" column="resources_name"/>
+		<property name="resourceURL" column="resources_url"/>
+		<property name="path" column="path"/>
+		<many-to-one name="parentResource" column="parent_id"/>
+	</class>
+</hibernate-mapping>

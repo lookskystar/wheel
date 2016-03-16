@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="lead" namespace="/lead" extends="common">
+	  	
+	  	<action name="leadAction" class="leadManageAction">
+	  		<result name="report">lunduiManage.jsp</result>
+	  		<result name="tempRepairReport">linxiu.jsp</result>
+	  		<result name="depotList">depotList.jsp</result>
+	  		<result name="stockreport">stocks.jsp</result>
+	  		<result name="stockinfo">stockList2.jsp</result>
+	  		<result name="treeList">reportTreeList.jsp</result>
+	  		<result name="repotjson" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  		<result name="jsonList" type="json">
+	  			<param name="root">result</param>
+	  		</result>
+	  	</action>
+	</package>
+</struts>

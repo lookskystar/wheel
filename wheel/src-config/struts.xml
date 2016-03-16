@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.custom.i18n.resources" value="I18NmMessage"/>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.devMode" value="true" />  
+	<constant name="struts.action.extension" value="do,action"></constant>
+	
+	<include file="strutsConfig/common.xml"></include>
+	<include file="strutsConfig/struts-stock.xml"></include>
+	<include file="strutsConfig/struts-system.xml"></include>
+	<include file="strutsConfig/struts-lead.xml"></include>
+</struts>

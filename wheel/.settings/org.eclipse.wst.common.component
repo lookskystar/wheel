@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="wheel">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-common"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-config"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-stock"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-system"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src-lead"/>
+        <property name="context-root" value="/wheel"/>
+        <property name="java-output-path" value="/wheel/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

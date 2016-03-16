@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lundui.manage.model">
+	<class name="WheelStock" table="tb_wheel_stock">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<property name="axleType" column="axle_type"/>
+		<property name="wheelType" column="wheel_type"/>
+		<property name="inventory" column="inventory"/>
+		<property name="goodNum" column="good_num"/>
+		<property name="notGoodNum" column="not_good_num"/>
+		<property name="minStock" column="min_stock"/>
+		<property name="maxBadStock" column="bad_stock"/>
+		<property name="sxNum" column="sx_num"/>
+		<property name="zcNum" column="zc_num"/>
+		<property name="depotCode" column="depot_code"/>
+		<property name="depotName" column="depot_name"/>
+	</class>
+</hibernate-mapping>

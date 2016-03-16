@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="system" namespace="/" extends="common">
+	  	
+	  	<!--  
+	  	<action name="loginAction" class="loginAction">
+	  		<result name="main" type="redirect">main.jsp</result>
+	  		<result name="loginOut">login.jsp</result>
+	  	</action>
+	  -->
+	  <action name="wheelEditAction" class="wheelEditAction">
+	  		<result name="wheellist">wheellist.jsp</result>
+	  		<result name="editwheel">editwheel.jsp</result>
+	  		<result name="info">wheelInfo.jsp</result>
+	  		<result name="reclist">reclist.jsp</result>
+	  </action>
+	  
+	  <action name="roleAction" class="roleManageAction">
+	  	<result name="showRoleList">roleManage.jsp</result>
+	  	<result name="edit">updateRole.jsp</result>
+	  	<result name="addSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="updateSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="deleteSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="assignSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="resourceList">choiceResource.jsp</result>
+	  </action>
+	  <action name="userAction" class="userManageAction">
+	  	<result name="list">personManage.jsp</result>
+	  	<result name="toAdd">addPerson.jsp</result>
+	  	<result name="addSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="updateSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="deleteSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="assignRole" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="edit">editPerson.jsp</result>
+	  	<result name="toAssignRole">choiceRole.jsp</result>
+	  </action>
+	  <action name="login" class="loginAction" method="login">
+	  	<interceptor-ref name="defaultStack"></interceptor-ref>
+	  	<result name="failure" type="redirect">/login.jsp</result>
+	  	<result name="success" type="redirect">/main.jsp</result>
+	  </action>
+	  <action name="exit" class="loginAction" method="exit">
+	  </action>
+	  <action name="depotAction" class="depotAction">
+	  	<result name="list">cjManage.jsp</result>
+	  	<result name="toAdd">addChejian.jsp</result>
+	  	<result name="toEdit">editChejian.jsp</result>
+	  	<result name="toEditDepot">editdepot.jsp</result>
+	  	<result name="addSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="updateSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="deleteSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  </action>
+	  <action name="alarmAction" class="alarmAction">
+	  	<result name="list">alarmList.jsp</result>
+	  	<result name="showAlarm">/alarm.jsp</result>
+	  	<result name="toAdd">addAlarm.jsp</result>
+	  	<result name="updateSuccess" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  	<result name="showJSON" type="json">
+	  		<param name="root">result</param>
+	  	</result>
+	  </action>
+	  <action name="resourceAction" class="resourceAction">
+	  	<result name="visit" type="redirect">${url}</result>
+	  	<result name="reload">/reload.jsp</result>
+	  </action>
+	</package>
+</struts>
